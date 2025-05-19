@@ -84,4 +84,31 @@ can be printed and use operators evaluate the following:
   }
   val book: Book = new Book("Earthlings", "Sayaka Murata", 200)
   println(book.checkout)
+
+
+  // EXTENSION
+
+  // 1. Convert a lowercase `String` to uppercase.
+  val word: String = "anastasia"
+  println(word.toUpperCase)
+
+  // 2. Convert the first letter of a `String` to uppercase.
+  println(word.capitalize)
+
+  // 3. “STRING” == “string” Is this true or false? Why?
+  // I'm pretty sure this operator is case sensitive so we should get false
+
+  val isEqual = "STRING" == "string"
+  println(isEqual)
+
+  // 4. Can you simply convert the `String` “one” to the `Int` 1?
+  // Not simply, we could use .toInt if it was "1" in quotes like a string
+
+  // 5. Can you simply convert the `Int` 1 to `String` “one”?
+  // Same as above, we could use .toString but this would give us "1" not "one"
+
+  // 6. Can you simply convert `Int` 1 to type `String`? Is the result as you would expect?
+  // yes you can! if you use .toString on an int, it will change the type, but can we do this on a val??
+  // We would probably need to save it to a new value
+
 }
