@@ -1,0 +1,3 @@
+object CollectionsTasks  extends App{
+
+}
