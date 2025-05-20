@@ -1,4 +1,4 @@
-object MonCodeAlong  extends App {
+object MonIntroToScalaCodeAlong  extends App {
 
   // declaring a value or "val".. an immutable place to store data
   // var - or variables are mutable.. less safe
