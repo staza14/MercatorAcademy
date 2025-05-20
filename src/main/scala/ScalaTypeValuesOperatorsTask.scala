@@ -74,9 +74,18 @@ can be printed and use operators evaluate the following:
   println(isOdd(5))
 
   /*
-  Consider a Library, there are many books. Write a Class called ‘Book’. What class parameters
+  5. Consider a Library, there are many books. Write a Class called ‘Book’. What class parameters
   will your book need? Can you include any class methods in the body? Can you consider type
   sensitivity in your class parameter(s) type(s) (and what needs to be made here if you do…)?
+
+  Type safety ---> If our class has multiple parameters that have the same type, ie multiple strings in my book class
+  then we can make them their own classes. This is type safety. These classes can be used elsewhere which may be
+  useful.
+  ex:
+  class Book (title: Title, genre: Genre, pageCount:Int){
+  }
+  class Title (title: String)
+  class Genre (genre: String)
    */
 
   class Book(val title: String, val author: String, val pages: Int) {
