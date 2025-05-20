@@ -95,4 +95,33 @@ object CollectionsTasks  extends App{
   // We should also be able to do this
   val updatedRemoveUser = failedAttempts - "user4"
   println(s"Updated failed login attempts without user4: $updatedRemoveUser")
+
+  // EXTENSION
+
+  // 1. Write two `Sets` that detail submissions on day 1 and day 2. (You can use your `Set` from
+  // question 5 if you want!)
+
+  val dayOneSubmissions: Set[String] = Set("Felicity", "Doug", "Bridget", "Jeremy", "Rupert", "Anastasia")
+  val dayTwoSubmissions: Set[String] = Set("Anastasia", "Aglaia", "Emmanuel", "Athena", "Tal", "Doug", "Jeremy")
+
+  println(s"Day One Submissions: ${dayOneSubmissions.mkString(", ")}")
+  println(s"Day Two Submissions: ${dayTwoSubmissions.mkString(", ")}")
+
+  // a) Who submitted on both days
+  // finding intersection using intersect - elements in both sets
+  val submissionIntersection = dayOneSubmissions.intersect(dayTwoSubmissions)
+  println(s"Submitted on both days: ${submissionIntersection.mkString(", ")}")
+
+  // b) Who submitted only on the first day
+  // finding the difference  between the two sets using diff
+  val onlySubmittedDayOne = dayOneSubmissions.diff(dayTwoSubmissions)
+  println(s"Submitted only on day 1: ${onlySubmittedDayOne.mkString(", ")}")
+
+  // c) A combined list of all unique submitters
+  // finding the union of the two sets - combination of all unique submitters
+  val uniqueSubmitters = dayOneSubmissions.union(dayTwoSubmissions)
+  println(s"Unique submitters: ${uniqueSubmitters.mkString(", ")}")
+
+
 }
+
