@@ -1,4 +1,4 @@
-object TueCollectionCodeAlong extends App{
+object IntroToCollectionsCodeAlong extends App{
 
 /* Types of collections
 --> More than one item of data can be stored in one of a number of different location. Sequences, Sets and Maps
@@ -37,7 +37,10 @@ object TueCollectionCodeAlong extends App{
 
   // ACCESSING DATA
 
-  // this is easy for a sequence, we can use the index
+  /* Sequences
+   this is easy for a sequence, we can use the index
+   */
+
   // Head gives us the first value
   val getSeqHead: Int = myFirstSequence.head
   println(s"sequence head: $getSeqHead")
@@ -48,4 +51,37 @@ object TueCollectionCodeAlong extends App{
 
   val seqGetThirdVal: Int = myFirstSequence(2)
   println(s"sequence at index 2: $seqGetThirdVal")
+
+
+  /* Set
+   We cannot use index to find values
+   */
+
+  //  We can check if a values is in a set we can do it like this
+  //  can also look like : MyFirstSet.contains(30)
+  val checkSetContains: Boolean = myFirstSet(30)
+  println(s"Is 30 in my set: $checkSetContains")
+
+  //  Generally for sets, we want to filter
+  val filterSet: Set[Int] = myFirstSet.filter(_ <3)
+  println(s"Filtered set: $filterSet")
+
+  val filterNotSet: Set[Int] = myFirstSet.filterNot(_ <3)
+  println(s"FilterNot set: $filterNotSet")
+
+  val evenSet: Set[Int] = myFirstSet.filterNot(_ % 2 != 0)
+  println(s"Even set: $evenSet")
+
+
+  /* Map
+    We can use the keys to get the values. This is great if we know the keys!
+   */
+
+  val getMapValue: Int = myFirstMap("one")
+  println(s"Get Map Value of key 'one': $getMapValue")
+
+  // This finds the value that is equal to 1 and gets the key that matches it
+  // If there are multiple of the value, it will return the first one it finds
+  val getMapKey: String = myFirstMap.find(_._2 == 2).get._1
+  println(s"Get Map Key of value 2: $getMapKey")
 }
