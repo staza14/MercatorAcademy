@@ -122,6 +122,57 @@ object CollectionsTasks  extends App{
   val uniqueSubmitters = dayOneSubmissions.union(dayTwoSubmissions)
   println(s"Unique submitters: ${uniqueSubmitters.mkString(", ")}")
 
+  /* RESEARCH
+
+  1. Write a short summary explaining how knowing the difference between `Seq` and `Set`
+  can help when writing tests.
+    Knowing the difference between the two is really important when writing tests because sets and unordered and
+    unique whereas sequences are ordered and not necesarily unique.
+    For things like queues, the order is important but things like access rights, the order doesn't matter.
+
+    If you're testing that a tax return was submitted once per user, using a Set for expected users helps prevent
+    false positives from duplicates in a Seq
+
+    2. A) Research the difference between the build in methods:
+
+    val failedAttempts: Map[String, Int] = Map(
+      "user1" -> 2,
+      "user2" -> 4
+    )
+
+    --> so, we want to know how many times user1 failed log in , we can do that 3 ways...
+
+      i. Map.get - returns a some(value) or None if there is no matching key.
+
+      val result = failedAttempts.get("user1")
+      println(result) // Output: Some(2)
+
+      ii. Map(key) - returns value directly or throws an error if not found
+
+      val result = failedAttempts("user1")
+      println(result) // Output: 2
+
+      OR
+
+      val result = failedAttempts("user3") // Will crash with NoSuchElementException!
+
+      iii. Map.getOrElse - This checks if the key exists, if it does it returns the value, if not it returns a default
+      value that you specified
+
+      val result = failedAttempts.getOrElse("user3", 0)
+      println(result) // Output: 0
+
+      B) Using you Map from MVP Q9, write an example using each of the commands above.
+
+      ** see examples above
+
+
+     C) In testing, when might it be dangerous to use Map(key) directly?
+
+     This can be dangerous when testing because if the key doesn't exist, an exception will be thrown and our tests will crash
+     unnecesarily, making it harder to find any real problems.
+   */
+
 
 }
 
