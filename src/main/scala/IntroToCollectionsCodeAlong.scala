@@ -175,7 +175,7 @@ object IntroToCollectionsCodeAlong extends App{
   // Now I want to prepend new Sequence to the beginning of my first sequence
   // all that we need to do is change the order
   val prependedListOne = newSeq +:  myFirstSequence
-  println(s"Prepended with +: --> $prependedListOne")
+  println(s"****Prepended with +: --> $prependedListOne")
   // OR
   val prependedListTwo = newSeq ++ myFirstSequence
   println(s"Prepended with ++ --> $prependedListTwo")
