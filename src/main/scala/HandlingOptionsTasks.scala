@@ -60,7 +60,39 @@ println("1b/c:")
     case e: NumberFormatException => println(s"$e is not a valid input for miles")
   }
 
+  // EXTENSION
 
+  /*
+  Logical operators used in IF statements (e.g., && or <) have an order of precedence.
+  1. What is this order, where can we find it?
+
+  From the scala docs:
+  ** Characters are listed below in increasing order of precedence, with characters on the same line having the same precedence.
+  |
+^
+&
+= !
+< >
+:
++ -
+* / %
+
+
+   */
+  println("\n----------extension-----------")
+//    2. What would (true || false && false) result in?
+// I think this will result in true, but the && is done first
+  println(s"2. ${true || false && false}")
+//    3. What about ((true || false) && false)? (Note the parentheses used here.)
+// I think this will be false, the () mean we do that first
+  println(s"2. ${((true || false) && false)}")
+//    4. And finally, how about (1 < 4 && 7 != 10 || 9 + 10 == 21)?
+// < is first and then != then & so true on the left side then + then == so false on the right and then lastly the OR
+// So we end up with true || false ---> true
+  println(s"3. ${(1 < 4 && 7 != 10 || 9 + 10 == 21)}")
+  println("------------------------------")
+
+  // RESEARCH
 
 
 }
