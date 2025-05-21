@@ -92,7 +92,22 @@ println("1b/c:")
   println(s"3. ${(1 < 4 && 7 != 10 || 9 + 10 == 21)}")
   println("------------------------------")
 
-  // RESEARCH
+  /* RESEARCH
+  If statements always return values. This means we can assign values based on if statements.
+  How would we go about doing this, or where could we search to find out?
+   */
 
+//  1. Create two values that hold integers. Assign any integer you'd like to these values.
 
+val num1: Int = 100
+val num2: Int = 11
+
+//  2. Create a new value of type `String` and assign it "yes" if the first value is greater than the second,
+//  and "no" if the second value is greater. (Don’t overthink this!)
+
+val oneGreaterThenTwo: String = if (num1 > num2) "yes" else "no"
+  println("\n----------research-----------")
+  println(s"num1 = $num1")
+  println(s"num2 = $num2")
+  println(s"Is num1 greater then num2 ---> $oneGreaterThenTwo ")
 }
