@@ -1,3 +1,5 @@
+package Week2Tasks
+
 object HandlingOptionsTasks extends App{
 
   /* MVP

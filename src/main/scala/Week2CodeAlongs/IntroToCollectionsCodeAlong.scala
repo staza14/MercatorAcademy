@@ -1,3 +1,5 @@
+package Week2CodeAlongs
+
 object IntroToCollectionsCodeAlong extends App{
 
 /* Types of collections

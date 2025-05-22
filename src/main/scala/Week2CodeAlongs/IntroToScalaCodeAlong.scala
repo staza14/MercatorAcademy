@@ -1,3 +1,5 @@
+package Week2CodeAlongs
+
 object IntroToScalaCodeAlong  extends App {
 
   // declaring a value or "val".. an immutable place to store data

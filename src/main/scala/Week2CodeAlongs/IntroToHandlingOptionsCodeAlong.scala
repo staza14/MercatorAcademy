@@ -1,4 +1,6 @@
-object IntroToHandlingOptions extends App{
+package Week2CodeAlongs
+
+object IntroToHandlingOptionsCodeAlong extends App{
 
   val weather:String = "sunny"
   val season:String = "summer"

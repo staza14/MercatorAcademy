@@ -1,3 +1,5 @@
+package Week2Tasks
+
 object ScalaTypeValuesOperatorsTask extends App {
 /* MVP
 

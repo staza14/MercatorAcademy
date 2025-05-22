@@ -1,3 +1,5 @@
+package Week2Tasks
+
 object CollectionsTasks  extends App{
   /* MVP
   Scenario: You are working as part of the development team for HMRC that are building a
