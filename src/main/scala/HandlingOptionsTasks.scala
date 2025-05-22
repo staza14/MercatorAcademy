@@ -37,9 +37,9 @@ println("1b/c:")
     println(s"$numWatermelons! There seem to be less the zero watermelons, none for you to buy. ")
   } else if (numWatermelons < 4){
     println(s"There are $numWatermelons watermelons. You won't need a bag.")
-  } else if (numWatermelons <= 5 && hasBag == true){
+  } else if (numWatermelons <= 5 && hasBag){
     println(s"You'll need a bag to cary $numWatermelons watermelons. Looks like you have one, nice!")
-  } else if (numWatermelons <= 5 && hasBag != true) {
+  } else if (numWatermelons <= 5 && !hasBag) {
     println(s"You'll need a bad to cary $numWatermelons watermelons. Come back when you have one.")
   } else {
     println(s"Sorry John, $numWatermelons is too much for you to cary.")
@@ -54,7 +54,7 @@ println("1b/c:")
   println("\n2:")
   try {
     val miles = "twenty".toInt
-    val total = miles * 0.45
+    val total: Double = miles * 0.45
     println(s"You will be paid back: £$total")
   } catch {
     case e: NumberFormatException => println(s"$e is not a valid input for miles")
