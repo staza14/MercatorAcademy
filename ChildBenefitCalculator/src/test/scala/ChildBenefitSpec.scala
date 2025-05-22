@@ -4,6 +4,7 @@ import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 
 class ChildBenefitSpec extends AnyWordSpec with Matchers {  
+  
   "isChildEligible" should {    
     "return true" when {      
       "child is younger than 16"in {   
@@ -14,4 +15,6 @@ class ChildBenefitSpec extends AnyWordSpec with Matchers {
       }    
     }  
   }
+  
+  
 }
