@@ -28,8 +28,9 @@ object ByTask extends App {
   val returnLink: WebElement = driver.findElement(By.linkText("Return to index"))
   returnLink.click()
 
+  driver.navigate().back()
   // by partial link text - navigate back to the form using return partial
-  val returnPartial: WebElement = driver.findElement(By.partialLinkText("web-f"))
+  val returnPartial: WebElement = driver.findElement(By.partialLinkText("Return"))
   returnPartial.click()
 
   driver.quit()
