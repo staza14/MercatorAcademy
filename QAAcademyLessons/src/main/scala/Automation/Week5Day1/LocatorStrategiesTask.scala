@@ -29,7 +29,7 @@ object LocatorStrategiesTask extends App {
 
   // CHECKBOX
 
-  val checkbox:WebElement = driver.findElement(By.cssSelector("table > tbody > tr:nth-child(5) > td > input[type=checkbox]:nth-child(2)"))
+  val checkbox:WebElement = driver.findElement(By.cssSelector("table>tbody>tr:nth-child(5)>td>input[type=checkbox]:nth-child(2)"))
   checkbox.click()
   println("Checkbox checked - found using cssSelector")
 
@@ -44,4 +44,6 @@ object LocatorStrategiesTask extends App {
   val backButton:WebElement = driver.findElement(By.partialLinkText("Go back"))
   backButton.click()
   println("Gone back- link found using partial link text")
+
+  driver.quit()
 }
