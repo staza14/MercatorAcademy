@@ -31,8 +31,10 @@ object ExtResearch extends App{
   // at this point this closes the last window
   // it doesn't seem to work to run it again
   //  driver.close()
-
+  val anotherdriver:WebDriver = new ChromeDriver()
+  anotherdriver.get("https://demoqa.com/browser-windows")
   // open another window
   // It doesn't seem like we can open another
   driver.quit()
+  anotherdriver.quit()
 }
