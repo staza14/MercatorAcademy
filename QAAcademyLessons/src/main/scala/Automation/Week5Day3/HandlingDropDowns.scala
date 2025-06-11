@@ -31,10 +31,10 @@ object HandlingDropDowns extends App{
   println(s"Selected by visible text: ${select.getFirstSelectedOption.getText}")
 
   select.selectByValue("volvo")
-  println(s"Selected by visible text: ${select.getFirstSelectedOption.getText}")
+  println(s"Selected by value: ${select.getFirstSelectedOption.getText}")
 
   select.selectByIndex(3)
-  println(s"Selected by visible text: ${select.getFirstSelectedOption.getText}")
+  println(s"Selected by index: ${select.getFirstSelectedOption.getText}")
 
   // closing the session
   driver.quit()
