@@ -58,5 +58,29 @@ object StaticTableMVP extends App {
     }
   })
 
+  // Extension
+
+  // Scroll to the bottom of the page
+  js.executeScript("window.scrollBy(0,document.body.scrollHeight)")
+  println("\nMade it to the bottom ⬇️")
+
+  // Change the color of the country column header
+  val countryHeaderElement:WebElement = tableElement.findElement(By.cssSelector("tbody > tr:nth-child(1) > td:nth-child(2)"))
+  js.executeScript("arguments[0].style.backgroundColor='yellow'", countryHeaderElement)
+  // Scroll back up so its in view
+  js.executeScript("arguments[0].scrollIntoView(true);", countryHeaderElement)
+
+  // Retrieve and print the page title using JavaScript.
+  val pageTitle:String = js.executeScript("return document.title;").toString;
+  println(s"\nThe title of this page is: $pageTitle")
+
+  // check is 'french' is in the languages and highlight it if it is
+  for (row <- allRows) {
+    val cells: List[WebElement] = row.findElements(By.tagName("td")).asScala.toList
+    val languageCell:WebElement = cells(4)
+
+    if (languageCell.getText == "French"){js.executeScript("arguments[0].style.backgroundColor='pink'", languageCell)}
+  }
+
   driver.quit()
 }
